@@ -1,0 +1,17 @@
+
+pandas
+scikit-learn
+sentence-transformers
+spacy
+pdfminer.six
+python-docx
+uvicorn[standard]
+streamlit
+joblib
+requests
+tqdm
+numpy==1.26.4
+fastapi==0.115.4
+starlette==0.40.0
+python-multipart==0.0.18
+

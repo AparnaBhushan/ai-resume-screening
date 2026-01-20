@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Analyzer</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        textarea { width: 100%; height: 200px; }
+        button { padding: 10px 20px; margin-top: 10px; }
+        .box { margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<h2>AI-Based Resume Screening & Skill Gap Analyzer</h2>
+
+<form method="post">
+    <label>Paste Resume Text:</label><br><br>
+    <textarea name="resume" required></textarea><br>
+    <button type="submit">Analyze</button>
+</form>
+
+{% if result %}
+<div class="box">
+    <h3>Predicted Role: {{ result.predicted_role }}</h3>
+    <p><b>Match Percentage:</b> {{ result.match_percentage }}%</p>
+
+    <p><b>Matched Skills:</b> {{ result.matched_skills }}</p>
+    <p><b>Missing Skills:</b> {{ result.missing_skills }}</p>
+</div>
+{% endif %}
+
+</body>
+</html>
